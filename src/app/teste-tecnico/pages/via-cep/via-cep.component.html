@@ -1,0 +1,62 @@
+<div class="buscar-cep">
+  <mat-form-field class="example-full-width" [appearance]="'outline'">
+    <mat-label>CEP</mat-label>
+    <input #cep type="text" matInput mask="00000-000" placeholder="00000-000" />
+  </mat-form-field>
+  <button mat-raised-button (click)="buscarCep(cep.value)">Buscar</button>
+</div>
+<form action="" class="form" [formGroup]="form" (ngSubmit)="salvarCep()">
+  <mat-form-field class="example-full-width" [appearance]="'outline'">
+    <mat-label>CEP</mat-label>
+    <input type="text" formControlName="cep" matInput mask="00000-000" placeholder="00000-000" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" [appearance]="'outline'">
+    <mat-label>Logradouro</mat-label>
+    <input type="text" formControlName="logradouro" matInput />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" [appearance]="'outline'">
+    <mat-label>Complemento</mat-label>
+    <input type="text" formControlName="complemento" matInput />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" [appearance]="'outline'">
+    <mat-label>Unidade</mat-label>
+    <input type="text" formControlName="unidade" matInput />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" [appearance]="'outline'">
+    <mat-label>Bairro</mat-label>
+    <input type="text" formControlName="bairro" matInput />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" [appearance]="'outline'">
+    <mat-label>Localidade</mat-label>
+    <input type="text" formControlName="localidade" matInput />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" [appearance]="'outline'">
+    <mat-label>UF</mat-label>
+    <input type="text" formControlName="uf" matInput />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" [appearance]="'outline'">
+    <mat-label>Estado</mat-label>
+    <input type="text" formControlName="estado" matInput />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" [appearance]="'outline'">
+    <mat-label>Região</mat-label>
+    <input type="text" formControlName="regiao" matInput />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" [appearance]="'outline'">
+    <mat-label>IBGE</mat-label>
+    <input type="text" formControlName="ibge" matInput />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" [appearance]="'outline'">
+    <mat-label>GIA</mat-label>
+    <input type="text" formControlName="gia" matInput />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" [appearance]="'outline'">
+    <mat-label>DDD</mat-label>
+    <input type="text" formControlName="ddd" matInput />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" [appearance]="'outline'">
+    <mat-label>Siafi</mat-label>
+    <input type="text" formControlName="siafi" matInput />
+  </mat-form-field>
+  <button mat-flat-button type="submit" [disabled]="!form.valid">Salvar</button>
+</form>
