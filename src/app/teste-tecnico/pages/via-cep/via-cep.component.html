@@ -43,7 +43,7 @@
     <label>Região</label>
   </p-floatLabel>
   <p-floatLabel>
-    <input type="text" pInputText formControlName="ibge" />
+    <input type="text" pInputText formControlName="ibge" readonly />
     <label>IBGE</label>
   </p-floatLabel>
   <p-floatLabel>
@@ -55,7 +55,7 @@
     <label>DDD</label>
   </p-floatLabel>
   <p-floatLabel>
-    <input type="text" pInputText formControlName="siafi" />
+    <input type="text" pInputText formControlName="siafi" readonly />
     <label>Siafi</label>
   </p-floatLabel>
   <button class="salvarCep" pButton type="submit" [disabled]="!form.valid">Salvar</button>
