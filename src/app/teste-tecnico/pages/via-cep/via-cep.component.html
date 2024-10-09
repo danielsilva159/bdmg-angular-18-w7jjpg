@@ -1,62 +1,64 @@
-<div class="buscar-cep">
-  <p-floatLabel>
-    <input #cep pInputText mask="00000-000" id="cep" />
-    <label for="cep">CEP</label>
-  </p-floatLabel>
-  <button pButton (click)="buscarCep(cep.value)">Buscar</button>
+<div class="div-cep">
+  <div class="buscar-cep">
+    <p-floatLabel>
+      <input #cep pInputText mask="00000-000" id="cep" />
+      <label for="cep">CEP</label>
+    </p-floatLabel>
+    <button pButton (click)="buscarCep(cep.value)">Buscar</button>
+  </div>
+  <form action="" class="form" [formGroup]="form" (ngSubmit)="salvarCep()">
+    <p-floatLabel>
+      <input type="text" pInputText formControlName="cep" mask="00000-000" placeholder="00000-000" />
+      <label>CEP</label>
+    </p-floatLabel>
+    <p-floatLabel>
+      <input type="text" pInputText formControlName="logradouro" />
+      <label>Logradouro</label>
+    </p-floatLabel>
+    <p-floatLabel>
+      <input type="text" pInputText formControlName="complemento" mask="0.000" />
+      <label>Complemento</label>
+    </p-floatLabel>
+    <p-floatLabel>
+      <input type="text" pInputText formControlName="unidade" />
+      <label>Unidade</label>
+    </p-floatLabel>
+    <p-floatLabel>
+      <input type="text" pInputText formControlName="bairro" />
+      <label>Bairro</label>
+    </p-floatLabel>
+    <p-floatLabel>
+      <input type="text" pInputText formControlName="localidade" />
+      <label>Localidade</label>
+    </p-floatLabel>
+    <p-floatLabel>
+      <input type="text" pInputText formControlName="uf" />
+      <label>UF</label>
+    </p-floatLabel>
+    <p-floatLabel>
+      <input type="text" pInputText formControlName="estado" />
+      <label>Estado</label>
+    </p-floatLabel>
+    <p-floatLabel>
+      <input type="text" pInputText formControlName="regiao" />
+      <label>Região</label>
+    </p-floatLabel>
+    <p-floatLabel>
+      <input type="text" pInputText formControlName="ibge" readonly />
+      <label>IBGE</label>
+    </p-floatLabel>
+    <p-floatLabel>
+      <input type="text" pInputText formControlName="gia" />
+      <label>GIA</label>
+    </p-floatLabel>
+    <p-floatLabel>
+      <input type="text" pInputText formControlName="ddd" />
+      <label>DDD</label>
+    </p-floatLabel>
+    <p-floatLabel>
+      <input type="text" pInputText formControlName="siafi" readonly />
+      <label>Siafi</label>
+    </p-floatLabel>
+    <button class="salvarCep" pButton type="submit" [disabled]="!form.valid">Salvar</button>
+  </form>
 </div>
-<form action="" class="form" [formGroup]="form" (ngSubmit)="salvarCep()">
-  <p-floatLabel>
-    <input type="text" pInputText formControlName="cep" mask="00000-000" placeholder="00000-000" />
-    <label>CEP</label>
-  </p-floatLabel>
-  <p-floatLabel>
-    <input type="text" pInputText formControlName="logradouro" />
-    <label>Logradouro</label>
-  </p-floatLabel>
-  <p-floatLabel>
-    <input type="text" pInputText formControlName="complemento" mask="0.000" />
-    <label>Complemento</label>
-  </p-floatLabel>
-  <p-floatLabel>
-    <input type="text" pInputText formControlName="unidade" />
-    <label>Unidade</label>
-  </p-floatLabel>
-  <p-floatLabel>
-    <input type="text" pInputText formControlName="bairro" />
-    <label>Bairro</label>
-  </p-floatLabel>
-  <p-floatLabel>
-    <input type="text" pInputText formControlName="localidade" />
-    <label>Localidade</label>
-  </p-floatLabel>
-  <p-floatLabel>
-    <input type="text" pInputText formControlName="uf" />
-    <label>UF</label>
-  </p-floatLabel>
-  <p-floatLabel>
-    <input type="text" pInputText formControlName="estado" />
-    <label>Estado</label>
-  </p-floatLabel>
-  <p-floatLabel>
-    <input type="text" pInputText formControlName="regiao" />
-    <label>Região</label>
-  </p-floatLabel>
-  <p-floatLabel>
-    <input type="text" pInputText formControlName="ibge" readonly />
-    <label>IBGE</label>
-  </p-floatLabel>
-  <p-floatLabel>
-    <input type="text" pInputText formControlName="gia" />
-    <label>GIA</label>
-  </p-floatLabel>
-  <p-floatLabel>
-    <input type="text" pInputText formControlName="ddd" />
-    <label>DDD</label>
-  </p-floatLabel>
-  <p-floatLabel>
-    <input type="text" pInputText formControlName="siafi" readonly />
-    <label>Siafi</label>
-  </p-floatLabel>
-  <button class="salvarCep" pButton type="submit" [disabled]="!form.valid">Salvar</button>
-</form>

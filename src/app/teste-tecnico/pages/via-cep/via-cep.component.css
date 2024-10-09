@@ -1,3 +1,6 @@
+.div-cep {
+  margin: 20px;
+}
 .buscar-cep {
   display: flex;
   gap: 20px;
