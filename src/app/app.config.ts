@@ -7,6 +7,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 
 import { routes } from './app.routes';
 import { provideEnvironmentNgxMask } from 'ngx-mask';
+import { provideToastr } from 'ngx-toastr';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,5 +17,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     importProvidersFrom(MatNativeDateModule),
     provideEnvironmentNgxMask(),
+    provideAnimations(),
+    provideToastr(),
   ],
 };

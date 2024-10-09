@@ -1,62 +1,62 @@
 <div class="buscar-cep">
-  <mat-form-field class="example-full-width" [appearance]="'outline'">
-    <mat-label>CEP</mat-label>
-    <input #cep type="text" matInput mask="00000-000" placeholder="00000-000" />
-  </mat-form-field>
-  <button mat-raised-button (click)="buscarCep(cep.value)">Buscar</button>
+  <p-floatLabel>
+    <input #cep pInputText mask="00000-000" id="cep" />
+    <label for="cep">CEP</label>
+  </p-floatLabel>
+  <button pButton (click)="buscarCep(cep.value)">Buscar</button>
 </div>
 <form action="" class="form" [formGroup]="form" (ngSubmit)="salvarCep()">
-  <mat-form-field class="example-full-width" [appearance]="'outline'">
-    <mat-label>CEP</mat-label>
-    <input type="text" formControlName="cep" matInput mask="00000-000" placeholder="00000-000" />
-  </mat-form-field>
-  <mat-form-field class="example-full-width" [appearance]="'outline'">
-    <mat-label>Logradouro</mat-label>
-    <input type="text" formControlName="logradouro" matInput />
-  </mat-form-field>
-  <mat-form-field class="example-full-width" [appearance]="'outline'">
-    <mat-label>Complemento</mat-label>
-    <input type="text" formControlName="complemento" matInput />
-  </mat-form-field>
-  <mat-form-field class="example-full-width" [appearance]="'outline'">
-    <mat-label>Unidade</mat-label>
-    <input type="text" formControlName="unidade" matInput />
-  </mat-form-field>
-  <mat-form-field class="example-full-width" [appearance]="'outline'">
-    <mat-label>Bairro</mat-label>
-    <input type="text" formControlName="bairro" matInput />
-  </mat-form-field>
-  <mat-form-field class="example-full-width" [appearance]="'outline'">
-    <mat-label>Localidade</mat-label>
-    <input type="text" formControlName="localidade" matInput />
-  </mat-form-field>
-  <mat-form-field class="example-full-width" [appearance]="'outline'">
-    <mat-label>UF</mat-label>
-    <input type="text" formControlName="uf" matInput />
-  </mat-form-field>
-  <mat-form-field class="example-full-width" [appearance]="'outline'">
-    <mat-label>Estado</mat-label>
-    <input type="text" formControlName="estado" matInput />
-  </mat-form-field>
-  <mat-form-field class="example-full-width" [appearance]="'outline'">
-    <mat-label>Região</mat-label>
-    <input type="text" formControlName="regiao" matInput />
-  </mat-form-field>
-  <mat-form-field class="example-full-width" [appearance]="'outline'">
-    <mat-label>IBGE</mat-label>
-    <input type="text" formControlName="ibge" matInput />
-  </mat-form-field>
-  <mat-form-field class="example-full-width" [appearance]="'outline'">
-    <mat-label>GIA</mat-label>
-    <input type="text" formControlName="gia" matInput />
-  </mat-form-field>
-  <mat-form-field class="example-full-width" [appearance]="'outline'">
-    <mat-label>DDD</mat-label>
-    <input type="text" formControlName="ddd" matInput />
-  </mat-form-field>
-  <mat-form-field class="example-full-width" [appearance]="'outline'">
-    <mat-label>Siafi</mat-label>
-    <input type="text" formControlName="siafi" matInput />
-  </mat-form-field>
-  <button mat-flat-button type="submit" [disabled]="!form.valid">Salvar</button>
+  <p-floatLabel>
+    <input type="text" pInputText formControlName="cep" mask="00000-000" placeholder="00000-000" />
+    <label>CEP</label>
+  </p-floatLabel>
+  <p-floatLabel>
+    <input type="text" pInputText formControlName="logradouro" />
+    <label>Logradouro</label>
+  </p-floatLabel>
+  <p-floatLabel>
+    <input type="text" pInputText formControlName="complemento" mask="0.000" />
+    <label>Complemento</label>
+  </p-floatLabel>
+  <p-floatLabel>
+    <input type="text" pInputText formControlName="unidade" />
+    <label>Unidade</label>
+  </p-floatLabel>
+  <p-floatLabel>
+    <input type="text" pInputText formControlName="bairro" />
+    <label>Bairro</label>
+  </p-floatLabel>
+  <p-floatLabel>
+    <input type="text" pInputText formControlName="localidade" />
+    <label>Localidade</label>
+  </p-floatLabel>
+  <p-floatLabel>
+    <input type="text" pInputText formControlName="uf" />
+    <label>UF</label>
+  </p-floatLabel>
+  <p-floatLabel>
+    <input type="text" pInputText formControlName="estado" />
+    <label>Estado</label>
+  </p-floatLabel>
+  <p-floatLabel>
+    <input type="text" pInputText formControlName="regiao" />
+    <label>Região</label>
+  </p-floatLabel>
+  <p-floatLabel>
+    <input type="text" pInputText formControlName="ibge" />
+    <label>IBGE</label>
+  </p-floatLabel>
+  <p-floatLabel>
+    <input type="text" pInputText formControlName="gia" />
+    <label>GIA</label>
+  </p-floatLabel>
+  <p-floatLabel>
+    <input type="text" pInputText formControlName="ddd" />
+    <label>DDD</label>
+  </p-floatLabel>
+  <p-floatLabel>
+    <input type="text" pInputText formControlName="siafi" />
+    <label>Siafi</label>
+  </p-floatLabel>
+  <button class="salvarCep" pButton type="submit" [disabled]="!form.valid">Salvar</button>
 </form>
