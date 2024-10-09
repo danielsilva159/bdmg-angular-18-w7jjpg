@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -22,6 +23,7 @@ import { ViaCepService } from '../../services/via-cep/via-cep.service';
     InputTextModule,
     FloatLabelModule,
     ButtonModule,
+    CommonModule,
   ],
   templateUrl: './via-cep.component.html',
   styleUrl: './via-cep.component.css',
