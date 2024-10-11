@@ -10,6 +10,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import ICep from '../../interfaces/cep.interface';
 import { LocalStorageService } from '../../services/local-storage/local-storage.service';
 import { ViaCepService } from '../../services/via-cep/via-cep.service';
+import { InputCepComponent } from '../../components/input-cep/input-cep.component';
 
 @Component({
   selector: 'app-via-cep',
@@ -24,6 +25,7 @@ import { ViaCepService } from '../../services/via-cep/via-cep.service';
     FloatLabelModule,
     ButtonModule,
     CommonModule,
+    InputCepComponent,
   ],
   templateUrl: './via-cep.component.html',
   styleUrl: './via-cep.component.css',

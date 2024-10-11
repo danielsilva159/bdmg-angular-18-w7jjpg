@@ -1,0 +1,15 @@
+<div [formGroup]="form" *ngIf="form">
+  <p-floatLabel>
+    <input
+      pInputText
+      [id]="campo"
+      [formControlName]="campo"
+      [type]="tipo"
+      [required]="obrigatorio"
+      [mask]="mascara"
+      [readOnly]="readOnly"
+    />
+    <label>{{ label }}</label>
+  </p-floatLabel>
+  <div *ngIf="isInvalid()" class="error-message">{{ label }} é obrigatório</div>
+</div>

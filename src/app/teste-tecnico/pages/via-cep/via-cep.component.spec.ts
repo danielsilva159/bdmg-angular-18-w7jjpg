@@ -8,6 +8,8 @@ import { provideNgxMask } from 'ngx-mask';
 import { ViaCepService } from '../../services/via-cep/via-cep.service';
 import { of } from 'rxjs';
 import { mockCep } from '../../../mocks/dados.mock';
+import { InputCepComponent } from '../../components/input-cep/input-cep.component';
+import { CommonModule } from '@angular/common';
 
 describe('ViaCepComponent', () => {
   let component: ViaCepComponent;
@@ -19,7 +21,7 @@ describe('ViaCepComponent', () => {
       buscarCep: () => of(mockCep),
     };
     await TestBed.configureTestingModule({
-      imports: [ViaCepComponent],
+      imports: [ViaCepComponent, InputCepComponent, CommonModule],
       providers: [
         provideHttpClientTesting(),
         provideHttpClient(),

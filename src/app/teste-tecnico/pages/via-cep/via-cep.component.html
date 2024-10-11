@@ -7,58 +7,20 @@
     <button pButton (click)="buscarCep(cep.value)">Buscar</button>
   </div>
   <form action="" class="form" [formGroup]="form" (ngSubmit)="salvarCep()">
-    <p-floatLabel>
-      <input type="text" pInputText formControlName="cep" mask="00000-000" placeholder="00000-000" />
-      <label>CEP</label>
-    </p-floatLabel>
-    <p-floatLabel>
-      <input type="text" pInputText formControlName="logradouro" />
-      <label>Logradouro</label>
-    </p-floatLabel>
-    <p-floatLabel>
-      <input type="text" pInputText formControlName="complemento" mask="0.000" />
-      <label>Complemento</label>
-    </p-floatLabel>
-    <p-floatLabel>
-      <input type="text" pInputText formControlName="unidade" />
-      <label>Unidade</label>
-    </p-floatLabel>
-    <p-floatLabel>
-      <input type="text" pInputText formControlName="bairro" />
-      <label>Bairro</label>
-    </p-floatLabel>
-    <p-floatLabel>
-      <input type="text" pInputText formControlName="localidade" />
-      <label>Localidade</label>
-    </p-floatLabel>
-    <p-floatLabel>
-      <input type="text" pInputText formControlName="uf" />
-      <label>UF</label>
-    </p-floatLabel>
-    <p-floatLabel>
-      <input type="text" pInputText formControlName="estado" />
-      <label>Estado</label>
-    </p-floatLabel>
-    <p-floatLabel>
-      <input type="text" pInputText formControlName="regiao" />
-      <label>Região</label>
-    </p-floatLabel>
-    <p-floatLabel>
-      <input type="text" pInputText formControlName="ibge" readonly />
-      <label>IBGE</label>
-    </p-floatLabel>
-    <p-floatLabel>
-      <input type="text" pInputText formControlName="gia" />
-      <label>GIA</label>
-    </p-floatLabel>
-    <p-floatLabel>
-      <input type="text" pInputText formControlName="ddd" />
-      <label>DDD</label>
-    </p-floatLabel>
-    <p-floatLabel>
-      <input type="text" pInputText formControlName="siafi" readonly />
-      <label>Siafi</label>
-    </p-floatLabel>
+    <app-input-cep [form]="form" [campo]="'cep'" [label]="'CEP'" [mascara]="'00000-000'"></app-input-cep>
+    <app-input-cep [form]="form" [campo]="'logradouro'" [label]="'Logradouro'"></app-input-cep>
+    <app-input-cep [form]="form" [campo]="'complemento'" [label]="'Complemento'" [mascara]="'0.000'"></app-input-cep>
+    <app-input-cep [form]="form" [campo]="'unidade'" [label]="'Unidade'"></app-input-cep>
+    <app-input-cep [form]="form" [campo]="'bairro'" [label]="'Bairro'"></app-input-cep>
+    <app-input-cep [form]="form" [campo]="'localidade'" [label]="'Localidade'"></app-input-cep>
+    <app-input-cep [form]="form" [campo]="'uf'" [label]="'UF'"></app-input-cep>
+    <app-input-cep [form]="form" [campo]="'estado'" [label]="'Estado'"></app-input-cep>
+    <app-input-cep [form]="form" [campo]="'regiao'" [label]="'Regiao'"></app-input-cep>
+    <app-input-cep [form]="form" [campo]="'ibge'" [label]="'IBGE'" [readOnly]="true"></app-input-cep>
+    <app-input-cep [form]="form" [campo]="'gia'" [label]="'GIA'"></app-input-cep>
+    <app-input-cep [form]="form" [campo]="'ddd'" [label]="'DDD'"></app-input-cep>
+    <app-input-cep [form]="form" [campo]="'siafi'" [label]="'Siafi'" [readOnly]="true"></app-input-cep>
+
     <button class="salvarCep" pButton type="submit" [disabled]="!form.valid">Salvar</button>
   </form>
 </div>
